@@ -77,7 +77,7 @@ class PushToVimTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns its designated display name.
+     * To verify that the PushToVim class correctly returns its designated display name.
      * The display name is used to identify the application in the GUI.
      * 
      * Method: getDisplayName()
@@ -90,7 +90,7 @@ class PushToVimTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the command line for TeXworks.
+     * To verify that the PushToVim class correctly returns the command line for Vim.
      * The command line is used to execute the application from the command line.
      * 
      * Method: getCommandLine()
@@ -101,8 +101,6 @@ class PushToVimTest {
     void testGetCommandLine() {
         String keyString = "TestKey";
         String[] expectedCommand = new String[] {"/usr/bin/vim", "--insert-text", "TestKey"};
-
-        // pushToVim.setCommandPath("/usr/bin/vim"); // TO add the function
         
         String[] actualCommand = pushToVim.getCommandLine(keyString);
 
@@ -110,7 +108,7 @@ class PushToVimTest {
     }
 
     /**
-     * This test run the external application to push the keys to be cited 
+     * This test run the external application to push the keys to be cited. 
      * 
      * Method: pushEntries()
      * 
@@ -123,7 +121,7 @@ class PushToVimTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the tooltip for TeXworks.
+     * To verify that the PushToVim class correctly returns the tooltip for Vim.
      * The tooltip is used to display a short description of the application in the GUI.
      * 
      * Method: getTooltip()
@@ -135,7 +133,7 @@ class PushToVimTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the Prefix for the citation command.
+     * To verify that the PushToVim class correctly returns the Prefix for the citation command.
      * The prefix is used to identify the start of the citation command.
      * 
      * Method: getCitePrefix()
@@ -147,7 +145,7 @@ class PushToVimTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the delimiter for the citation command.
+     * To verify that the PushToVim class correctly returns the delimiter for the citation command.
      * The delimiter is used to separate the citation keys.
      * 
      * Method: getDelimiter()
@@ -159,7 +157,7 @@ class PushToVimTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the Suffix for the citation command.
+     * To verify that the PushToVim class correctly returns the Suffix for the citation command.
      * The suffix is used to identify the end of the citation command.
      * 
      * Method: getCiteSuffix()

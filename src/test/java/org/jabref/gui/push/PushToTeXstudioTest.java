@@ -77,7 +77,7 @@ class PushToTeXstudioTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns its designated display name.
+     * To verify that the PushToTeXstudio class correctly returns its designated display name.
      * The display name is used to identify the application in the GUI.
      * 
      * Method: getDisplayName()
@@ -90,7 +90,7 @@ class PushToTeXstudioTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the command line for TeXworks.
+     * To verify that the PushToTeXstudio class correctly returns the command line for TeXstudio.
      * The command line is used to execute the application from the command line.
      * 
      * Method: getCommandLine()
@@ -123,7 +123,7 @@ class PushToTeXstudioTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the tooltip for TeXworks.
+     * To verify that the PushToTeXstudio class correctly returns the tooltip for TeXstudio.
      * The tooltip is used to display a short description of the application in the GUI.
      * 
      * Method: getTooltip()
@@ -135,7 +135,7 @@ class PushToTeXstudioTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the Prefix for the citation command.
+     * To verify that the PushToTeXstudio class correctly returns the Prefix for the citation command.
      * The prefix is used to identify the start of the citation command.
      * 
      * Method: getCitePrefix()
@@ -147,7 +147,7 @@ class PushToTeXstudioTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the delimiter for the citation command.
+     * To verify that the PushToTeXstudio class correctly returns the delimiter for the citation command.
      * The delimiter is used to separate the citation keys.
      * 
      * Method: getDelimiter()
@@ -159,7 +159,7 @@ class PushToTeXstudioTest {
     }
 
     /**
-     * To verify that the PushToTeXworks class correctly returns the Suffix for the citation command.
+     * To verify that the PushToTeXstudio class correctly returns the Suffix for the citation command.
      * The suffix is used to identify the end of the citation command.
      * 
      * Method: getCiteSuffix()
