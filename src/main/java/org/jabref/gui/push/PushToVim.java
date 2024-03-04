@@ -44,6 +44,13 @@ public class PushToVim extends AbstractPushToApplication {
     }
 
     @Override
+    protected String[] getCommandLine(String keyString) {
+        return new String[] {commandPath, "--servername",
+        preferencesService.getPushToApplicationPreferences().getVimServer(), "--remote-send",
+        "<C-\\><C-N>a" + getCitePrefix() + keyString + getCiteSuffix()};
+    }
+
+    @Override
     public void pushEntries(BibDatabaseContext database, List<BibEntry> entries, String keys) {
         couldNotPush = false;
         couldNotCall = false;
@@ -57,9 +64,7 @@ public class PushToVim extends AbstractPushToApplication {
         }
 
         try {
-            String[] com = new String[]{commandPath, "--servername",
-                    preferencesService.getPushToApplicationPreferences().getVimServer(), "--remote-send",
-                    "<C-\\><C-N>a" + getCitePrefix() + keys + getCiteSuffix()};
+            String[] com = getCommandLine(keys);
 
             LOGGER.atDebug()
                   .setMessage("Executing command {}")

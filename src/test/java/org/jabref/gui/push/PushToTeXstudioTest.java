@@ -24,7 +24,7 @@ import static org.mockito.Mockito.when;
 
 class PushToTeXstudioTest {
 
-    private static final String TEXWORKS_CLIENT_PATH = "/usr/bin/texstudio";
+    private static final String TEXSTUDIO_CLIENT_PATH = "/usr/bin/texstudio";
     private static final String DISPLAY_NAME = "TeXstudio";
 
     private PushToTeXstudio pushToTeXstudio;
@@ -36,7 +36,7 @@ class PushToTeXstudioTest {
         PushToApplicationPreferences pushToApplicationPreferences = mock(PushToApplicationPreferences.class);
 
         // Mock the command path
-        Map<String, String> commandPaths = Map.of(DISPLAY_NAME, TEXWORKS_CLIENT_PATH);
+        Map<String, String> commandPaths = Map.of(DISPLAY_NAME, TEXSTUDIO_CLIENT_PATH);
         ObservableMap<String, String> observableCommandPaths = FXCollections.observableMap(commandPaths);
         when(pushToApplicationPreferences.getCommandPaths()).thenReturn(new SimpleMapProperty<>(observableCommandPaths));
         when(preferencesService.getPushToApplicationPreferences()).thenReturn(pushToApplicationPreferences);
@@ -49,7 +49,7 @@ class PushToTeXstudioTest {
         when(externalApplicationsPreferences.getCiteCommand()).thenReturn(mockCiteCommand);
         when(preferencesService.getExternalApplicationsPreferences()).thenReturn(externalApplicationsPreferences);
 
-        // Create a new instance of PushToTeXworks
+        // Create a new instance of PushToTeXstudio
         pushToTeXstudio = new PushToTeXstudio(dialogService, preferencesService);
     }
 
@@ -84,7 +84,7 @@ class PushToTeXstudioTest {
         ProcessBuilder processBuilder = mock(ProcessBuilder.class);
 
         String testKey = "TestKey";
-        String[] expectedCommand = new String[] {TEXWORKS_CLIENT_PATH, "--insert-cite", testKey};
+        String[] expectedCommand = new String[] {TEXSTUDIO_CLIENT_PATH, "--insert-cite", testKey};
 
         pushToTeXstudio.pushEntries(null, null, testKey, processBuilder);
 
